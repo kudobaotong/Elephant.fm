@@ -93,7 +93,7 @@
             for (var p=0;p<genre.length;p++) {
                 //console.log(genre[p]);
                 //selectGenre(genre[p]);
-                SC.get('/tracks', {genres: genre[p], limit: 50}, function(tracks){ // retrieves a list of 200 SoundCloud tracks
+                SC.get('api.soundcloud.com/tracks', {genres: genre[p], limit: 50}, function(tracks){ // retrieves a list of 200 SoundCloud tracks
                     $.merge(playList, tracks); 
                     t++;
                     if (t == genre.length) {
