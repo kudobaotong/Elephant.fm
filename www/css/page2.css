@@ -1,0 +1,174 @@
+/* Elephant.fm */
+/* STYLESHEET FOR player PAGE */
+/*------------------------------------------------------*/
+/*      default media query: < 350px                    */
+/*                                                      */
+/*------------------------------------------------------*/
+#mainPlayerWrapper {
+    width: 100%;
+    height: 26em;
+    position: relative;
+    background-color: rgb(156, 156, 156);
+    border: 1px solid gray;
+    border-left: none;
+    border-right: none;
+}
+#headline {
+    color: transparent;
+    height: 3em;
+}
+#playbg {
+    margin: auto;
+    height: 15em;
+    width: 15em;
+    background-image: url("../images/cd.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #99ccff;
+    border-radius: 50%;
+    position: relative;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+.trackTitle {
+    font-size:20px;
+/*    padding-top:35px;*/
+    font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    position: absolute;
+    text-align: center;
+    width: 90%;
+    padding: 5%;
+}
+
+.bottom-player{
+    margin: 2em; 
+}
+
+#stop-button {
+      width: 3em;
+      height: 3em;
+      position: absolute;
+      left: 20%;
+}
+#stop {
+  color: transparent;
+  background-color: transparent;
+  background-image: url("../images/stop2.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 3em;
+  width: 3em;
+  position: absolute;
+}
+
+#play-button {
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  left: 50%;
+}
+#play {
+      color: transparent;
+      overflow: hidden;
+      background-color: transparent;
+      background-image: url("../images/play2.png");
+      background-size: 50%;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      position: absolute;
+      width: 3em;
+      height: 3em;
+}
+
+#pause {
+      color: transparent;
+      overflow: hidden;
+      background-color: transparent;
+      background-image: url("../images/pause2.png");
+      background-size: 50%;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      position: absolute;
+      width: 3em;
+      height: 3em;
+}
+#next-button {
+     position: absolute;
+      width: 3em;
+      height: 3em;
+      position: absolute;
+     left: 75%;
+}
+#next {
+     color: transparent;
+      background-color: transparent;
+      background-image: url("../images/next2.png");
+      background-size: 50%;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      position: absolute;
+      width: 5em;
+      height: 3em;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+/*------------------------------------------------------*/
+/*                  > 350px width                       */
+/*------------------------------------------------------*/
+@media screen and (min-width:350px){
+    #mainPlayerWrapper{
+        height: 77vh;
+    }
+
+    #playbg {
+      height: 17em;
+      width: 17em;
+    }
+
+    .trackTitle {
+    padding-top:35px;
+    font-size:25px;
+    }
+
+}
+/*------------------------------------------------------*/
+/*                  > 700px for iPad Mini               */
+/*------------------------------------------------------*/
+@media screen and (min-width:700px){
+    #playbg{
+        height: 50vh;
+        width: 50vh;
+    }
+
+    #stop-button {
+        background-size: 65%;
+    }
+    #play-button {
+        background-size: 65%;
+    }
+    #pause-button {
+        background-size: 65%;
+    }
+    #next-button {
+        background-size: 65%;
+    }
+
+    .trackTitle {
+    font-size:30px;
+    }
+
+}
+/*------------------------------------------------------*/
+/*                  > 1100px for desktop                */
+/*------------------------------------------------------*/
+@media screen and (min-width:1000px){
+
+    .trackTitle {
+    padding-top:35px;
+    font-size:40px;
+    }
+}
